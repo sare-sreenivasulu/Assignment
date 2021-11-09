@@ -1,0 +1,212 @@
+Assignment on String class
+----------------------------
+1. public class string {
+
+	public static void main(String[] args) {
+	 String str="helloworld";
+	 int len=str.length();
+	 System.out.println("Length of the string:"+len);
+
+	}
+
+}
+
+public class string {
+
+	public static void main(String[] args) {
+	 String str= new String("helloworld");
+	 str.length();
+	 System.out.println("Length of the string:"+str.length());
+
+	}
+
+}
+2. public class string {
+
+	public static void main(String[] args) {
+	 String str="hello";
+	 String str2="How are you";
+	 System.out.println(str+" "+str2);
+
+	}
+
+}
+
+public class string {
+
+	public static void main(String[] args) {
+	 String str= new String("hello");
+	 String str2=new String("How are you");
+	 String s2=str.concat(str2);
+	 System.out.println("The concatenation of two strings:"+s2);
+
+	}
+
+}
+3 a.public class string {
+
+	public static void main(String[] args) {
+	 String str="Java String pool refers to collection of strings which are stored in heap memory";
+     String s1=str.toLowerCase();
+	 System.out.println(s1);
+
+	}
+
+}
+
+b. public class string {
+
+	public static void main(String[] args) {
+	 String str="Java String pool refers to collection of strings which are stored in heap memory";
+     String s1=str.toUpperCase();
+	 System.out.println(s1);
+
+	}
+
+}
+c. public class string {
+
+	public static void main(String[] args) {
+	 String str="Java String pool refers to collection of strings which are stored in heap memory";
+     String s1=str.replace("a","$");
+	 System.out.println(s1);
+
+	}
+
+}
+
+d. public class string {
+
+	public static void main(String[] args) {
+	 String str="Java String pool refers to collection of strings which are stored in heap memory";
+    if(str.contains("collection"))
+	 System.out.println("The string contains collection");
+    else
+    	System.out.println("result not found");
+    	
+
+	}
+
+}
+
+e. public class string {
+
+	public static void main(String[] args) {
+	 String str1="Java String pool refers to collection of strings which are stored in heap memory";
+	 String str2="Java String pool refers to collection of strings which are stored in heap memory";
+	    if(str1==str2)
+	    	System.out.println("match");
+	    else
+	    	System.out.println("not match");
+
+	}
+
+}
+
+f.public class string {
+
+	public static void main(String[] args) {
+	 String str1="Java String pool refers to collection of strings which are stored in heap memory";
+	 String str2="Java String pool refers to collection of strings which are stored in heap memory";
+	    if(str1.equalsIgnoreCase(str2)==0)
+	    	System.out.println("match");
+	    else
+	    	System.out.println("not match");
+
+	}
+
+}
+
+public class string {
+
+	public static void main(String[] args) {
+	 String str1="Java String pool refers to collection of strings which are stored in heap memory";
+	 String str2="Java String pool refers to collection of strings which are stored in heap memory";
+	    if(str1.equals(str2))
+	    	System.out.println("match");
+	    else
+	    	System.out.println("not match");
+
+	}
+
+}
+
+Assignment on Stringbuffer class
+---------------------------------
+1.  public class string {
+
+	public static void main(String[] args) {
+		StringBuffer s1=new StringBuffer("functionality of strings");
+		s1.append("StringBuffer, is a peer class of String");
+		System.out.println("  "+s1);
+		
+	}
+}
+
+2. public class string {
+
+	public static void main(String[] args) {
+		StringBuffer s1=new StringBuffer("It is used to _ at the specified index position");
+		s1.delete(14,15);
+		s1.insert(14, "insert text");
+		System.out.println(s1);
+		
+	}
+}
+3.  public class string {
+
+	public static void main(String[] args) {
+		StringBuffer s1=new StringBuffer("This method returns the reversed object on which it was called");
+		s1.reverse();
+		System.out.println(s1);
+		
+	}
+}
+
+
+Assignments on StringBuilder class
+-------------------------------------
+1.  public class string {
+
+	public static void main(String[] args) {
+		StringBuilder s1=new StringBuilder("functionality of strings");
+		s1.append("StringBuffer, is a peer class of String");
+		System.out.println("  "+s1);
+		
+	}
+}
+
+2. public class string {
+
+	public static void main(String[] args) {
+		StringBuilder s1=new StringBuilder("It is used to _ at the specified index position");
+		s1.delete(14,15);
+		s1.insert(14, "insert text");
+		System.out.println(s1);
+		
+	}
+}
+3.  public class string {
+
+	public static void main(String[] args) {
+		StringBuilder s1=new StringBuilder("This method returns the reversed object on which it was called");
+		s1.reverse();
+		System.out.println(s1);
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+  
