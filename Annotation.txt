@@ -1,0 +1,111 @@
+public class OutputFileTest		
+	{
+    	private File output; 
+    	@Before public void createOutputFile() 
+ 	 { 
+       output = new File(...);
+    	}
+  
+	@After public void deleteOutputFile() 
+   		{
+        output.delete(); 
+   	} 
+     
+    @Test public void testFile1() 
+    		{
+       
+   		} 
+	@Test public void testFile2() 
+   	 {
+       
+    		}
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.
+
+import java.lang.annotation.*;
+import java.lang.reflect.*;  
+//@Target(ElementType.METHOD)
+@Target(ElementType.METHOD)
+//@Target(ElementType.LOCAL_VARIABLE)
+@Retention(RetentionPolicy.RUNTIME)
+@interface info
+{
+	int ID();
+	String name();
+	String date();
+	String time();
+}
+class hello
+{
+	@info(ID=1,name="Sreenu",date="21-07-1997",time="7:37AM")
+	
+	public void abc()
+	{
+		System.out.print("jagadish");
+	}
+}
+public class Anno2  {
+   
+	
+	public static void main(String[] args) throws Exception
+	{
+	
+         hello h=new hello();
+         Method m=h.getClass().getMethod("abc");
+         info i =m.getAnnotation(info.class);
+         System.out.print(i.ID()+" "+i.name()+" "+ i.date()+" "+ i.time());
+	}
+
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.
+
+import java.lang.annotation.*;
+import java.lang.reflect.*;
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+@interface Execute
+{
+	int sequence();
+}
+class Myclass
+{
+	@Execute(sequence=3)
+	public void mymethod1()
+	{
+		System.out.print("order3");
+	}
+	@Execute(sequence=2)
+	public void mymethod2()
+	{
+		System.out.print("order2");
+	
+	}
+	@Execute(sequence=1)
+	public void mymethod3()
+	{
+		System.out.print("order1");
+	
+	}
+}
+
+public class Anno3 {
+
+	public static void main(String[] args) throws Exception {
+		Myclass m=new Myclass();
+		Method m1=m.getClass().getMethod("mymethod1");
+		Method m2=m.getClass().getMethod("mymethod2");
+		Method m3=m.getClass().getMethod("mymethod3");
+		Execute e1=m1.getAnnotation(Execute.class);
+		Execute e2=m2.getAnnotation(Execute.class);
+		Execute e3=m3.getAnnotation(Execute.class);
+      System.out.println(e1.sequence());
+
+      System.out.println(e2.sequence());
+
+      System.out.print(e3.sequence());
+
+	}
+
+}
